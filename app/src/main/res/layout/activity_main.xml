@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="50dp"
+        android:text="Date Picker" />
+
+    <TextView
+        android:id="@+id/tvsingleOptions"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvTime"
+        android:layout_margin="50dp"
+        android:text="Single Options Picker" />
+
+    <TextView
+        android:id="@+id/tvTwoOptions"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvTime"
+        android:layout_margin="50dp"
+        android:text="Two Options Picker" />
+
+
+    <TextView
+        android:id="@+id/tvThreeOptions"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvTwoOptions"
+        android:layout_marginLeft="50dp"
+        android:text="Three Options Picker" />
+
+    <View
+        android:id="@+id/vMasker"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#e0000000"
+        android:visibility="gone" />
+
+</LinearLayout>

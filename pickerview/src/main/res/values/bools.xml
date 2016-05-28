@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- true pickerview_textsize-->
+    <bool name="pickerview_customTextSize">false</bool>
+</resources>
