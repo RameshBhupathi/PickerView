@@ -1,7 +1,30 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'pickerview'   // Has to be same as your library module name
 
-version = "0.0.1"
+    publishedGroupId = 'com.ramesh.mypicker'
+    libraryName = 'PickerVIew'
+    artifact = 'pickerview'     // Has to be same as your library module name
+
+    libraryDescription = 'Picker View For Android like IOS'
+
+    // Your github repo link
+    siteUrl = 'https://github.com/RameshBhupathi/PickerView'
+    gitUrl = 'https://github.com/RameshBhupathi/PickerView.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'ramesh'
+    developerName = 'Ramesh Bhupathi'
+    developerEmail = 'bhupatiramesh@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 
 android {
     compileSdkVersion 21
@@ -25,3 +48,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

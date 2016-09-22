@@ -2,46 +2,58 @@
 <items version="2" >
 
     <item
-        jar="/Users/ramesh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        is-multidex="true"
+        jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_a8f71992acf9695e988a4ef99001f5ad13a19fb4/classes.dex" />
+        sha1="96aaae6adb0371a7991c1bf6571ed5229e9f528e">
+        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_50795898a4fcd7d841cefa8cd6481daa9c3b9e36/classes.dex" />
     </item>
     <item
-        jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.1_ba8cd9327da4cd1ec8596b0789de5f54543cdedb/classes.dex" />
-    </item>
-    <item
+        is-multidex="true"
         jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.2"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
         <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_ed0776a481fe3ff561af53fefc38550d2533f132/classes.dex" />
     </item>
     <item
-        jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        is-multidex="true"
+        jar="/Users/ramesh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.2"
-        sha1="4fc64030c1ffd8b87302e5701877ab67ded55298">
-        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_50795898a4fcd7d841cefa8cd6481daa9c3b9e36/classes.dex" />
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_a8f71992acf9695e988a4ef99001f5ad13a19fb4/classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="990208172f35fe76dfabc33ecc5c2c9daf17818d">
+        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_48a66e8c507d888c11fd5863c37ce1b0872e5b94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.2"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
         <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.1_f7f074615b8adad6b95f4d9eb36ae968aa789f85/classes.dex" />
     </item>
     <item
-        jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        is-multidex="true"
+        jar="/Users/ramesh/GitHub/PickerView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.2"
-        sha1="edc76e2467ccd966b733af3a369a673ad1bf65bd">
-        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_48a66e8c507d888c11fd5863c37ce1b0872e5b94/classes.dex" />
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/ramesh/GitHub/PickerView/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.1_ba8cd9327da4cd1ec8596b0789de5f54543cdedb/classes.dex" />
     </item>
 
 </items>
