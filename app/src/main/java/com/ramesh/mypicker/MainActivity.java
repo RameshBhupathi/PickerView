@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         twoTVOptions.setOnClickListener(this);
         threeTVOptions.setOnClickListener(this);
 
-        pvTime = new TimePickerView(this, TimePickerView.Type.YEAR_MONTH_DAY);
+        /*pvTime = new TimePickerView(this, TimePickerView.Type.YEAR_MONTH_DAY);
         Log.v("dateee", "" + new Date());
         pvTime.setTime(new Date(),TimePickerView.Type.YEAR_MONTH_DAY);
         pvTime.setCyclic(false);
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.v("selected Date", "" + date);
                 tvTime.setText(getTime(date));
             }
-        });
+        });*/
         tvTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
