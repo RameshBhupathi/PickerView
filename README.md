@@ -6,9 +6,9 @@ Three Types of Options Pickers we
 3. Triple OptionPicker
 
 # Screen Shot
-![alt tag](https://github.com/RameshBhupathi/PickerView/blob/master/device-2016-09-23-083825.png)
-![alt tag](https://github.com/RameshBhupathi/PickerView/blob/master/two%20options.png)
-![alt tag](https://github.com/RameshBhupathi/PickerView/blob/master/device-2016-09-23-084005.png)
+<img src="https://github.com/RameshBhupathi/PickerView/blob/master/device-2016-09-23-083825.png" width=245,height=245/>
+     <img src="https://github.com/RameshBhupathi/PickerView/blob/master/two%20options.png" width=200,height=200 />
+<img src="https://github.com/RameshBhupathi/PickerView/blob/master/device-2016-09-23-084005.png" width=200,height=200/>
 
 #How to Use
  ```java
@@ -45,8 +45,8 @@ Add this to Main build.gradle
 ##Add this to app gradle file
 ```java 
 
-   compile 'compile 'com.ramesh.mypicker:pickerview:1.0'
- 
+  compile 'com.ramesh.mypicker:pickerview:1.0'
+  
 ```
 
 
