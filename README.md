@@ -31,7 +31,10 @@ MyOptionsPickerView singlePicker = new MyOptionsPickerView(MainActivity.this);
                 vMasker.setVisibility(View.GONE);
             }
         });
+      
 ```
+### To Show The Picker
+                singlePicker.show();
 ##Dependencies
 Add this to Main build.gradle
 ```java
