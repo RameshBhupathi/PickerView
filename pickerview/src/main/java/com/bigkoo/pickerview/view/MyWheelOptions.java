@@ -26,6 +26,10 @@ public class MyWheelOptions<T> {
     private OnItemSelectedListener wheelListener_option1;
     private OnItemSelectedListener wheelListener_option2;
 
+    private OnItemSelectedListener option1SelectedListener;
+    private OnItemSelectedListener option2SelectedListener;
+    private OnItemSelectedListener option3SelectedListener;
+
     public View getView() {
         return view;
     }
@@ -104,6 +108,9 @@ public class MyWheelOptions<T> {
                 if (mOptions3Items != null) {
                     wheelListener_option2.onItemSelected(opt2Select);
                 }
+                if(option1SelectedListener != null){
+                    option1SelectedListener.onItemSelected(index);
+                }
             }
         };
         wheelListener_option2 = new OnItemSelectedListener() {
@@ -121,6 +128,12 @@ public class MyWheelOptions<T> {
                     wv_option3.setAdapter(new ArrayWheelAdapter(mOptions3Items));
                     wv_option3.setCurrentItem(index);
 
+                    if(option2SelectedListener != null){
+                        option2SelectedListener.onItemSelected(index);
+                    }
+                    if(option3SelectedListener != null){
+                        option3SelectedListener.onItemSelected(wv_option3);
+                    }
                 }
             }
         };
@@ -128,8 +141,15 @@ public class MyWheelOptions<T> {
 //		// 添加联动监听
         if (options2Items != null && linkage)
             wv_option1.setOnItemSelectedListener(wheelListener_option1);
+        else {
+            wv_option1.setOnItemSelectedListener(option1SelectedListener);
+            if(options2Items != null)
+                wv_option2.setOnItemSelectedListener(option2SelectedListener);
+        }
         if (options3Items != null && linkage)
             wv_option2.setOnItemSelectedListener(wheelListener_option2);
+        else if(options3Items != null)
+            wv_option3.setOnItemSelectedListener(option3SelectedListener);
     }
 
     /**
@@ -208,6 +228,18 @@ public class MyWheelOptions<T> {
         wv_option1.setCurrentItem(option1);
         wv_option2.setCurrentItem(option2);
         wv_option3.setCurrentItem(option3);
+    }
+
+    public void setOption1SelectedListener(OnItemSelectedListener option1SelectedListener) {
+        this.option1SelectedListener = option1SelectedListener;
+    }
+
+    public void setOption2SelectedListener(OnItemSelectedListener option2SelectedListener) {
+        this.option2SelectedListener = option2SelectedListener;
+    }
+
+    public void setOption3SelectedListener(OnItemSelectedListener option3SelectedListener) {
+        this.option3SelectedListener = option3SelectedListener;
     }
 
     private void itemSelected(int opt1Select, int opt2Select, int opt3Select) {
