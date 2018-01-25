@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         items.add("E");
         singlePicker.setPicker(items);
         singlePicker.setTitle("Single Picker");
+        singlePicker.setBtnCancelText("取消");
+        singlePicker.setBtnSubmitText("确认");
         singlePicker.setCyclic(false);
         singlePicker.setSelectOptions(0);
         singlePicker.setOnoptionsSelectListener(new MyOptionsPickerView.OnOptionsSelectListener() {
@@ -105,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         twoPicker.setPicker(twoItemsOptions1, twoItemsOptions2, false);
         twoPicker.setTitle("Picker");
+        twoPicker.setBtnCancelText("取消");
+        twoPicker.setBtnSubmitText("确认");
         twoPicker.setCyclic(false, false, false);
         twoPicker.setSelectOptions(0, 0);
         twoPicker.setOnoptionsSelectListener(new MyOptionsPickerView.OnOptionsSelectListener() {
@@ -148,6 +152,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         threePicker.setPicker(threeItemsOptions1, threeItemsOptions2, threeItemsOptions3, false);
         threePicker.setTitle("Picker");
+        threePicker.setBtnCancelText("取消");
+        threePicker.setBtnSubmitText("确认");
         threePicker.setCyclic(false, false, false);
         threePicker.setSelectOptions(0, 0, 0);
         threePicker.setOnoptionsSelectListener(new MyOptionsPickerView.OnOptionsSelectListener() {
