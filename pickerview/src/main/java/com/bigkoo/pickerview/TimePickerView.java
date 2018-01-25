@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.view.BasePickerView;
@@ -23,7 +24,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
     }// 四种选择模式，年月日时分，年月日，时分，月日时分
 
     MyWheelTime wheelTime;
-    private View btnSubmit, btnCancel;
+    private Button btnSubmit, btnCancel;
     private TextView tvTitle;
     private static final String TAG_SUBMIT = "submit";
     private static final String TAG_CANCEL = "cancel";
@@ -34,9 +35,9 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
 
         LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
         // -----确定和取消按钮
-        btnSubmit = findViewById(R.id.btnSubmit);
+        btnSubmit = (Button) findViewById(R.id.btnSubmit);
         btnSubmit.setTag(TAG_SUBMIT);
-        btnCancel = findViewById(R.id.btnCancel);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setTag(TAG_CANCEL);
         btnSubmit.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
@@ -59,7 +60,18 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         wheelTime.setPicker(year, month, day, hours, minute, second, ampm);
 
     }
-
+    /*
+    * 设置确定按钮标题
+    * */
+    public void setBtnSubmitText(String text) {
+        btnSubmit.setText(text);
+    }
+    /*
+    * 设置取消按钮标题
+    * */
+    public void setBtnCancelText(String text) {
+        btnCancel.setText(text);
+    }
     /**
      * 设置可以选择的时间范围
      *

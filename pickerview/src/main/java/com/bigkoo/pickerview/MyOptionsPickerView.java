@@ -3,6 +3,7 @@ package com.bigkoo.pickerview;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.view.BasePickerView;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
  */
 public class MyOptionsPickerView<T> extends BasePickerView implements View.OnClickListener {
     MyWheelOptions wheelOptions;
-    private View btnSubmit, btnCancel;
+    private Button btnSubmit, btnCancel;
     private TextView tvTitle;
     private OnOptionsSelectListener optionsSelectListener;
     private static final String TAG_SUBMIT = "submit";
@@ -25,9 +26,9 @@ public class MyOptionsPickerView<T> extends BasePickerView implements View.OnCli
         super(context);
         LayoutInflater.from(context).inflate(R.layout.pickerview_options, contentContainer);
         // -----确定和取消按钮
-        btnSubmit = findViewById(R.id.btnSubmit);
+        btnSubmit = (Button) findViewById(R.id.btnSubmit);
         btnSubmit.setTag(TAG_SUBMIT);
-        btnCancel = findViewById(R.id.btnCancel);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setTag(TAG_CANCEL);
         btnSubmit.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
@@ -37,6 +38,19 @@ public class MyOptionsPickerView<T> extends BasePickerView implements View.OnCli
         final View optionspicker = findViewById(R.id.optionspicker);
         wheelOptions = new MyWheelOptions(optionspicker);
     }
+    /*
+    * 设置确定按钮标题
+    * */
+    public void setBtnSubmitText(String text) {
+        btnSubmit.setText(text);
+    }
+    /*
+    * 设置取消按钮标题
+    * */
+    public void setBtnCancelText(String text) {
+        btnCancel.setText(text);
+    }
+
 
     public void setPicker(ArrayList<T> optionsItems) {
         wheelOptions.setPicker(optionsItems, null, null, false);
