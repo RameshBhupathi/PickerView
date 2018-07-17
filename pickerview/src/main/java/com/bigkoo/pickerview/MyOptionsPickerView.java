@@ -157,5 +157,9 @@ public class MyOptionsPickerView<T> extends BasePickerView implements View.OnCli
     public void setTitle(String title) {
         tvTitle.setText(title);
     }
+
+    public MyWheelOptions getWheelOptions() {
+        return wheelOptions;
+    }
 }
 
