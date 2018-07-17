@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.bigkoo.pickerview.utils.PickerViewAnimateUtil;
@@ -31,6 +32,64 @@ public class BasePickerView {
 
     private OnDismissListener onDismissListener;
     private boolean isDismissing;
+
+    Button btnSubmit, btnCancel;
+
+    public View getBtnSubmit() {
+        return btnSubmit;
+    }
+
+    public void setBtnSubmit(Button btnSubmit) {
+        this.btnSubmit = btnSubmit;
+    }
+
+    public View getBtnCancel() {
+        return btnCancel;
+    }
+
+    public void setBtnCancel(Button btnCancel) {
+        this.btnCancel = btnCancel;
+    }
+
+    public void hideCancelButton() {
+        if (this.btnCancel != null)
+            this.btnCancel.setVisibility(View.GONE);
+    }
+
+    public void hideSubmitButton() {
+        if (this.btnSubmit != null)
+            this.btnSubmit.setVisibility(View.GONE);
+    }
+
+    public void showCancelButton() {
+        if (this.btnCancel != null)
+            this.btnCancel.setVisibility(View.VISIBLE);
+    }
+
+    public void showSubmitButton() {
+        if (this.btnSubmit != null)
+            this.btnSubmit.setVisibility(View.VISIBLE);
+    }
+
+    public void setCancelButtonText(String newText) {
+        if (this.btnCancel != null)
+            this.btnCancel.setText(newText);
+    }
+
+    public void setSubmitButtonText(String newText) {
+        if (this.btnSubmit != null)
+            this.btnSubmit.setText(newText);
+    }
+
+    public void setCancelButtonText(int resId) {
+        if (this.btnCancel != null)
+            this.btnCancel.setText(resId);
+    }
+
+    public void setSubmitButtonText(int resId) {
+        if (this.btnSubmit != null)
+            this.btnSubmit.setText(resId);
+    }
 
     private Animation outAnim;
     private Animation inAnim;
