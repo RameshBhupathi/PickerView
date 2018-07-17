@@ -29,6 +29,7 @@ public class BasePickerView {
     protected ViewGroup contentContainer;
     private ViewGroup decorView;//activity的根View
     private ViewGroup rootView;//附加View 的 根View
+    private FrameLayout overlayFrameLayout;
 
     private OnDismissListener onDismissListener;
     private boolean isDismissing;
@@ -110,8 +111,13 @@ public class BasePickerView {
         rootView.setLayoutParams(new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT
         ));
+        overlayFrameLayout = (FrameLayout) rootView.findViewById(R.id.outmost_container);
         contentContainer = (ViewGroup) rootView.findViewById(R.id.content_container);
         contentContainer.setLayoutParams(params);
+    }
+
+    public void hideOverlay() {
+        overlayFrameLayout.setBackgroundResource(0);
     }
 
     protected void init() {
