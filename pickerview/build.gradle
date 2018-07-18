@@ -47,6 +47,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support.constraint:constraint-layout:1.1.0"
+    compile "com.android.support:support-annotations:24.2.0"
 }
 
 // Place it at the end of the file

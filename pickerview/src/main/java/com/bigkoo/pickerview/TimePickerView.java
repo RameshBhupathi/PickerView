@@ -1,6 +1,8 @@
 package com.bigkoo.pickerview;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,12 @@ import java.util.Date;
  * Edited by Ramesh Bhupathi on 16/05/18.
  */
 public class TimePickerView extends BasePickerView implements View.OnClickListener {
+
+    @Override
+    public void setCustomFont(@NonNull Typeface typeface) {
+        wheelTime.setCustomTypeface(typeface);
+    }
+
     public enum Type {
         ALL, YEAR_MONTH_DAY, HOURS_MINS, MONTH_DAY_HOUR_MIN, YEAR_MONTH, HOUR_MIN_SEC, HOUR_MIN_APPM
     }// 四种选择模式，年月日时分，年月日，时分，月日时分
