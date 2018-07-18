@@ -1,6 +1,8 @@
 package com.bigkoo.pickerview.view;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 
@@ -315,6 +317,16 @@ public class WheelTime {
 
     public void setEndYear(int endYear) {
         this.endYear = endYear;
+    }
+
+    public void setCustomTypeface(@NonNull Typeface typeface) {
+        wv_ampm.setFont(typeface);
+        wv_day.setFont(typeface);
+        wv_hours.setFont(typeface);
+        wv_mins.setFont(typeface);
+        wv_month.setFont(typeface);
+        wv_seconds.setFont(typeface);
+        wv_year.setFont(typeface);
     }
 
 

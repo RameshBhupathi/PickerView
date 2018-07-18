@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.Gravity;
@@ -261,6 +262,11 @@ public class WheelView extends View {
             paintOuterText.setTextSize(textSize);
             paintCenterText.setTextSize(textSize);
         }
+    }
+
+    public final void setFont(@NonNull Typeface typeface){
+        paintCenterText.setTypeface(typeface);
+        paintOuterText.setTypeface(typeface);
     }
 
     public final void setCurrentItem(int currentItem) {

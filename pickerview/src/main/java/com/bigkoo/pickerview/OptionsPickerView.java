@@ -1,6 +1,8 @@
 package com.bigkoo.pickerview;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +22,12 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
     private OnOptionsSelectListener optionsSelectListener;
     private static final String TAG_SUBMIT = "submit";
     private static final String TAG_CANCEL = "cancel";
+
+    @Override
+    public void setCustomFont(@NonNull Typeface typeface) {
+        wheelOptions.setCustomTypeface(typeface);
+    }
+
     public OptionsPickerView(Context context) {
         super(context);
         LayoutInflater.from(context).inflate(R.layout.pickerview_options, contentContainer);

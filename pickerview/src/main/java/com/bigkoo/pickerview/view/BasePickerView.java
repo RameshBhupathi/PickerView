@@ -2,6 +2,8 @@ package com.bigkoo.pickerview.view;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -20,7 +22,7 @@ import com.bigkoo.pickerview.listener.OnDismissListener;
  * Created by Sai on 15/11/22.
  * 精仿iOSPickerViewController控件
  */
-public class BasePickerView {
+public abstract class BasePickerView {
     private final FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM
     );
@@ -91,6 +93,8 @@ public class BasePickerView {
         if (this.btnSubmit != null)
             this.btnSubmit.setText(resId);
     }
+
+    public abstract void setCustomFont(@NonNull Typeface typeface);
 
     private Animation outAnim;
     private Animation inAnim;
