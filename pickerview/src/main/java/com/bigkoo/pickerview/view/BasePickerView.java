@@ -2,6 +2,8 @@ package com.bigkoo.pickerview.view;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -20,7 +22,7 @@ import com.bigkoo.pickerview.listener.OnDismissListener;
  * Created by Sai on 15/11/22.
  * 精仿iOSPickerViewController控件
  */
-public class BasePickerView {
+public abstract class BasePickerView {
     private final FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM
     );
@@ -29,6 +31,7 @@ public class BasePickerView {
     protected ViewGroup contentContainer;
     private ViewGroup decorView;//activity的根View
     private ViewGroup rootView;//附加View 的 根View
+    private FrameLayout overlayFrameLayout;
 
     private OnDismissListener onDismissListener;
     private boolean isDismissing;
@@ -91,6 +94,8 @@ public class BasePickerView {
             this.btnSubmit.setText(resId);
     }
 
+    public abstract void setCustomFont(@NonNull Typeface typeface);
+
     private Animation outAnim;
     private Animation inAnim;
     private int gravity = Gravity.BOTTOM;
@@ -110,8 +115,13 @@ public class BasePickerView {
         rootView.setLayoutParams(new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT
         ));
+        overlayFrameLayout = (FrameLayout) rootView.findViewById(R.id.outmost_container);
         contentContainer = (ViewGroup) rootView.findViewById(R.id.content_container);
         contentContainer.setLayoutParams(params);
+    }
+
+    public void hideOverlay() {
+        overlayFrameLayout.setBackgroundResource(0);
     }
 
     protected void init() {

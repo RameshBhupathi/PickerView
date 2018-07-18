@@ -1,5 +1,7 @@
 package com.bigkoo.pickerview.view;
 
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.bigkoo.pickerview.R;
@@ -251,6 +253,12 @@ public class MyWheelOptions<T> {
             wv_option3.setAdapter(new ArrayWheelAdapter(mOptions3Items));
             wv_option3.setCurrentItem(opt3Select);
         }
+    }
+
+    public void setCustomTypeface(@NonNull Typeface typeface) {
+        wv_option1.setFont(typeface);
+        wv_option2.setFont(typeface);
+        wv_option3.setFont(typeface);
     }
 
 

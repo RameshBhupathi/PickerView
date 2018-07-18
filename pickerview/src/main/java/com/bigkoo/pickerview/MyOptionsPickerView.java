@@ -1,6 +1,8 @@
 package com.bigkoo.pickerview;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +55,11 @@ public class MyOptionsPickerView<T> extends BasePickerView implements View.OnCli
                           boolean linkage) {
         wheelOptions.setPicker(options1Items, options2Items, options3Items,
                 linkage);
+    }
+
+    @Override
+    public void setCustomFont(@NonNull Typeface typeface){
+        wheelOptions.setCustomTypeface(typeface);
     }
 
     /**
