@@ -49,7 +49,7 @@ Add this to Main build.gradle
 ##Add this to app gradle file
 ```java 
 
-  compile 'com.ramesh.mypicker:pickerview:1.0'
+  compile 'com.ramesh.mypicker:pickerview:1.1'
   
 ```
 
