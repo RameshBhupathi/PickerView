@@ -94,6 +94,24 @@ public abstract class BasePickerView {
             this.btnSubmit.setText(resId);
     }
 
+    public void setSubmitButtonTextSize(float textSize) {
+        if (this.btnSubmit != null)
+            this.btnSubmit.setTextSize(textSize);
+    }
+    public void setSubmitButtonTextColor(int color) {
+        if (this.btnSubmit != null)
+            this.btnSubmit.setTextColor(color);
+    }
+
+    public void setCancelButtonTextSize(float textSize) {
+        if (this.btnCancel != null)
+            this.btnCancel.setTextSize(textSize);
+    }
+    public void setCancelButtonTextColor(int color) {
+        if (this.btnCancel != null)
+            this.btnCancel.setTextColor(color);
+    }
+
     public abstract void setCustomFont(@NonNull Typeface typeface);
 
     private Animation outAnim;
