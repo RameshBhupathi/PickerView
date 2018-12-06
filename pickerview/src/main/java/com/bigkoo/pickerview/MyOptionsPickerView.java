@@ -164,6 +164,13 @@ public class MyOptionsPickerView<T> extends BasePickerView implements View.OnCli
     public void setTitle(String title) {
         tvTitle.setText(title);
     }
+    public void setTitleTextSize(float textSize) {
+        tvTitle.setTextSize(textSize);
+    }
+    public void setTitleTextColor(int color) {
+        tvTitle.setTextColor(color);
+    }
+
 
     public MyWheelOptions getWheelOptions() {
         return wheelOptions;
