@@ -5,6 +5,6 @@
     <!--paddingRight -->
     <dimen name="pickerview_topbar_paddingright">30dp</dimen>
     <dimen name="pickerview_topbar_btn_textsize">20sp</dimen>
-    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
-    <dimen name="pickerview_textsize">20sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">17sp</dimen>
+    <dimen name="pickerview_textsize">15sp</dimen>
 </resources>
